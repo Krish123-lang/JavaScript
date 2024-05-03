@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Hello world</h1>
+
+  <p id="demo">This is a paragraph</p>
+
+  <div class="test1">Testing 1</div>
+
+  <p id="intro">This is something</p>
+  <p id="test2"></p>
+  
+  <script src="script.js"></script>
+
+  <script>
+    let p = document.getElementById("demo");
+    p.innerHTML="<h3>Bye World</h3>";
+    p.style.color='red';
+
+  let t=document.getElementsByClassName("test1");
+    t[0].style.color='blue';
+
+    
+    const element = document.getElementById("intro");
+    document.getElementById("test2").innerHTML = "this is also something" + element.innerHTML;
+  </script>
+</body>
+
+</html>
