@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>InnerHTML</title>
+    </head>
+
+    <body>
+        <p id="demo"></p>
+
+        <h1 class="head">this is heading</h1>
+        <h2 class="head">this is heading 2</h2>
+        <h3 class="head">this is heading 3</h3>
+        <h4 class="head">this is heading 4</h4>
+
+        <button onclick="document.getElementById('demo').style.color='blue'">click me</button>
+
+        <h1 onclick="this.innerHTML='clicked '">click on this text</h1>
+
+        <p onclick="changeText(this)">click here</p>
+
+        <button id="showDate">Show date</button>
+
+        <script>
+            document.getElementById("demo").innerHTML = "<h1>this is paragraph</h1>";
+
+            // headder = document.getElementsByClassName("head");
+            // for (let i = 0; i < headder.length; i++) {
+            //     console.log(headder[i]);
+            // }
+
+            const qs = document.querySelectorAll("h2.head");
+            console.log(qs);
+
+            // document.write(Date());
+            // document.getElementById("demo").style.color="red";
+
+            function changeText(id) {
+                id.innerHTML = "clicked Successfully !!!";
+            }
+
+            function showDate() {
+                document.getElementById("showDate").innerText = Date();
+            }
+
+            let fun = (a, b) => a * b;
+            console.log(fun(4, 3)); // 12
+
+            hello = () => {
+                console.log("Hello");
+            }
+            hello();
+
+            hi = () => "K xa khavar !";
+            console.log(hi());
+
+        </script>
+    </body>
+
+</html>
