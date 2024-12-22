@@ -1,6 +1,19 @@
 const body = document.getElementsByTagName("body")[0];
-// body.style.backgroundColor="red";
 
-document.addEventListener("click", function red() { body.style.backgroundColor = "red" });
+document.getElementById("red").addEventListener("click", function () {
+    body.style.backgroundColor = "red";
+});
 
-// console.log(body);
+document.getElementById("blue").addEventListener("click", function () {
+    body.style.backgroundColor = "blue";
+});
+
+document.getElementById("green").addEventListener("click", function () {
+    body.style.backgroundColor = "green";
+});
+
+document.getElementById("random").addEventListener("click", function () {
+    // Generate a random RGB color
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+    body.style.backgroundColor = randomColor;
+});
